@@ -1,0 +1,105 @@
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Permanent Marker', cursive; */
+/* font-family: 'Rowdies', cursive; */
+footer {
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+h1,
+h2 {
+    font-family: 'Rowdies', cursive;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Rowdies', cursive;
+    text-transform: capitalize;
+}
+
+h4 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.navbar {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.hero {
+    background: url(../images/Turismo_y_Deporte_Aventura.jpg) no-repeat;
+    background-size: cover;
+    height: 50vh;
+    min-height: 600px;
+    color: saddlebrown;
+}
+
+.list-group button {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    transition: all .5s ease-in-out;
+}
+
+.list-group button:hover {
+    background-color: cadetblue;
+    font-size: 25px;
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+    color: black;
+    background-color: cadetblue;
+}
+
+.modal-title {
+    color: white;
+}
+
+.modal-header {
+    background-color: cadetblue;
+}
+
+#historia {
+    background-color: cadetblue;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.nosotros {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: cadetblue;
+}
+
+.card-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#mapa iframe {
+    width: 100%;
+    aspect-ratio: 1.2;
+}
+
+#conocenos {
+    background-color: cadetblue;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll_selection {
+    scroll-margin-top: 65px;
+}

@@ -1,0 +1,39 @@
+<div class="container" style="margin: 100px 10px;">
+    <div class="col-4 offset-md-4">
+        <div class="row">
+            <h2>Nueva entrada:</h2>
+        </div>
+        <div style="margin-top: 50px;">
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+                <div class="row g-3 mb-4">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nombre del viaje" aria-label=""
+                            name="titulo">
+                    </div>
+                </div>
+                <div class="row g-3 mb-4">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Precio" aria-label="" name="precio">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Fecha" aria-label="" name="fecha">
+                    </div>
+                </div>
+                <div class="row container mb-4">
+                    <div class="col">
+                        <textarea name="cuerpo" id="" cols="55" rows="10" placeholder="Agregar descripción"></textarea>
+                    </div>
+                </div>
+                <div class="row container mb-5">
+                    <label for="">Imagen: <input type="file" name="imagen" id="imagen"></label>
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="btn btn-primary">Terminar</button>
+                </div>
+            </form>
+            {{#if error}}
+            <p class="text-danger">{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

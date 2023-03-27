@@ -22,7 +22,7 @@ router.post('/', async (req, res, next) => {
         var usuario = req.body.usuario;
         var password = req.body.password;
 
-        console.log (req.body);
+        console.log(req.body);
 
         var data = await usuariosModel.getUserAndPassword(usuario, password);
 
@@ -39,6 +39,6 @@ router.post('/', async (req, res, next) => {
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 module.exports = router;

@@ -10,11 +10,18 @@
     </div>
     {{!-- Abre Admin Novedades --}}
     <div class="row" style="margin: 50px 10px;">
-        <div class="col-8">
+        <div class="col-6">
             <h1>Listado de Novedades:</h1>
         </div>
-        <div class="col-3 text-center">
+        <div class="col-4 text-center">
             <a href="/admin/novedades/agregar" class="btn btn-success"><i class="bi bi-plus-lg"> Nueva entrada</i></a>
+        </div>
+        <div class="col-2">
+            <form class="d-flex" role="search" action="/admin/novedades" method="get">
+                <button class="btn btn-secondary" type="submit"><i class="bi bi-search"></i></button>
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q"
+                    {{#if q}}value="{{q}}"{{/if}}>
+            </form>
         </div>
     </div>
     <div class="row">
@@ -50,6 +57,11 @@
                     {{/each}}
                 </tbody>
             </table>
+            {{#if is_search}}
+                {{#unless novedades.length}}
+                    <p>No se encontraron resultados para "<strong>{{q}}</strong>"</p>
+                {{/unless}}
+            {{/if}}
         </div>
     </div>
 </div>

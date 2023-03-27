@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 23-03-2023 a las 14:38:49
+-- Tiempo de generación: 27-03-2023 a las 18:37:05
 -- Versión del servidor: 8.0.31
 -- Versión de PHP: 8.0.26
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `viajes` (
   `precio` int NOT NULL,
   `img_id` varchar(250) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `viajes`
@@ -66,10 +66,10 @@ CREATE TABLE IF NOT EXISTS `viajes` (
 
 INSERT INTO `viajes` (`id`, `titulo`, `cuerpo`, `fecha`, `precio`, `img_id`) VALUES
 (1, 'Ciclo turismo', 'Increíble experiencia en bici recorriendo la reserva de Otamendi en la provincia de Buenos Aires.', '12/06/2023', 65000, 'gsqfwrhiphrsm1qnie0q'),
-(14, 'Escalada', 'Fin de semana de escalada en las sierras bonaerenses. Se incluye alojamiento y comidas.', '22/04/2023', 75000, 'ytazsinqxb2b37efruge'),
-(13, 'Navegar en kayak', 'Un día completo recorriendo los brazos del delta del Paraná.', '04/04/2023', 56000, 'zfok1rr8h31kguvwxddd'),
-(15, 'Trekking', 'Dos días recorriendo las pintorescas sierras de Buenos Aires. Pernocte en Refugio.', '08/05/2023', 48000, 'on89mytfckmqmm7pdllp'),
-(16, 'Vuelo en globo', 'Un día de pura aventura. Un vuelo de varias horas para contemplar una vista poco conocida del paisaje de la provincia.', '16/04/2023', 65000, 'dpfini7shl7fvfukwvaz');
+(2, 'Escalada', 'Fin de semana de escalada en las sierras bonaerenses. Se incluye alojamiento y comidas.', '22/04/2023', 75000, 'ytazsinqxb2b37efruge'),
+(3, 'Navegar en kayak', 'Un día completo recorriendo los brazos del delta del Paraná.', '04/04/2023', 56000, 'pmkmgjfkpchwqsouellz'),
+(4, 'Trekking', 'Dos días recorriendo las pintorescas sierras de Buenos Aires. Pernocte en Refugio.', '08/05/2023', 48000, 'on89mytfckmqmm7pdllp'),
+(5, 'Vuelo en globo', 'Un día de pura aventura. Un vuelo de varias horas para contemplar una vista poco conocida del paisaje de la provincia.', '16/04/2023', 65000, NULL);
 
 -- --------------------------------------------------------
 

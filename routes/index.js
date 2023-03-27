@@ -7,7 +7,7 @@ var cloudinary = require('cloudinary').v2;
 /* GET home page. */
 router.get('/', async function (req, res, next) {
   var novedades = await novedadesModel.getNovedades();
-  novedades = novedades.splice(0, 5);
+  // novedades = novedades.splice(0, 5);
   novedades = novedades.map(novedad => {
     if (novedad.img_id) {
       const imagen = cloudinary.url(novedad.img_id, {
@@ -58,7 +58,7 @@ router.post('/', async (req, res, next) => {
   var info = await transport.sendMail(obj);
 
   res.render('index', {
-    message: 'Mensaje enviado correctamente'
+    message: '¡Mensaje enviado correctamente!'
   });
 });
 

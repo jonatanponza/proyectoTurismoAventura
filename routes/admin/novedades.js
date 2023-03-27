@@ -9,7 +9,12 @@ const destroy = util.promisify(cloudinary.uploader.destroy);
 
 /* GET Novedades page. */
 router.get('/', async function (req, res, next) {
-    var novedades = await novedadesModel.getNovedades();
+    var novedades
+    if (req.query.q === undefined) {
+        novedades = await novedadesModel.getNovedades();
+    } else {
+        novedades = await novedadesModel.buscarNovedades(req.query.q);
+    }
 
     novedades = novedades.map(novedad => {
         if (novedad.img_id) {
@@ -33,7 +38,9 @@ router.get('/', async function (req, res, next) {
     res.render('admin/novedades', {
         layout: 'admin/layout',
         persona: req.session.nombre,
-        novedades
+        novedades,
+        is_search: req.query.q !== undefined,
+        q: req.query.q
     });
 });
 
@@ -45,7 +52,7 @@ router.get('/eliminar/:id', async (req, res, next) => {
     if (novedad.img_id) {
         await (destroy(novedad.img_id));
     }
-    
+
     await novedadesModel.deleteNovedadById(id);
     res.redirect('/admin/novedades')
 });
@@ -109,7 +116,7 @@ router.post('/modificar', async (req, res, next) => {
                 imagen = req.files.imagen;
                 img_id = (await
                     uploader(imagen.tempFilePath)).public_id;
-                    borrar_img_vieja = true;
+                borrar_img_vieja = true;
             }
         }
         if (borrar_img_vieja && req.body.img_original) {

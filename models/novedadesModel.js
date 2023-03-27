@@ -39,4 +39,10 @@ async function modificarNovedadById(obj, id) {
         }
 }
 
-module.exports = { getNovedades, deleteNovedadById, insertNovedad, getNovedadById, modificarNovedadById }
+async function buscarNovedades(busqueda) {
+        var query = "select * from viajes where titulo like ? OR cuerpo like ?";
+        var rows = await pool.query(query, ['%' + busqueda + '%' , '%' + busqueda + '%' , '%' + busqueda + '%']);
+        return rows;
+}
+
+module.exports = { getNovedades, deleteNovedadById, insertNovedad, getNovedadById, modificarNovedadById, buscarNovedades }
